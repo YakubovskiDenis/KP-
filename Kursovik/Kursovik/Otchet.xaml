@@ -1,0 +1,27 @@
+﻿<Window x:Class="Kursovik.Otchet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursovik"
+        mc:Ignorable="d"
+        Title="Составление отчетов" Height="364.5" Width="701" WindowStartupLocation="CenterScreen" Background="LightGray" Loaded="Window_Loaded">
+    <Grid>
+        <Border MinWidth="400" Background="White" VerticalAlignment="Top" Padding="30" MaxWidth="500" CornerRadius="25" Height="198" HorizontalAlignment="Left" Width="400" Margin="124,52,0,0">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel Margin="-20,0,-20,0" VerticalAlignment="Center">
+                <Label Content="Выбор критериев отчета" FontSize="16" HorizontalAlignment="Center" Foreground="Black"  Margin="121,0,67,0" Width="192" />
+                <ComboBox x:Name="ChoiseTable" Margin="20 5" HorizontalAlignment="Left" Width="110" SelectionChanged="ChoiseTable_SelectionChanged" >
+                    <ComboBoxItem Content="Принятые на учет"/>
+                    <ComboBoxItem Content="Выписанные"/>
+                </ComboBox>
+                <TextBlock Text="123" FontSize="20" Foreground="Transparent"></TextBlock>
+                <Button x:Name="CreateBtn" Content="Создать" Background="#0072F5" Foreground="White" BorderBrush="#0072F5" Margin="127,12,116,12" Click="CreateBtn_Click" />
+            </StackPanel>
+        </Border>
+        <DataGrid x:Name="SourseGrid" HorizontalAlignment="Left" Height="100" Margin="10,223,0,0" VerticalAlignment="Top" Width="100" Background="Transparent"/>
+
+    </Grid>
+</Window>

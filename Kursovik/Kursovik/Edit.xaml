@@ -1,0 +1,26 @@
+﻿<Window x:Class="Kursovik.Edit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+Title="Редактирование" Height="524" Width="805.611" WindowStyle="ThreeDBorderWindow"  FontFamily="Arial Rounded MT Bold" FontSize="16" WindowStartupLocation="CenterScreen" Visibility="Visible">
+    <Grid x:Name="Mainroot" Background = "#ffdadada" Margin="0,0,0,-6">
+        <Border MinWidth="400" Margin="199,31,193,0" Background="White" VerticalAlignment="Top" Padding="10" MaxWidth="500" CornerRadius="20" Height="442" HorizontalAlignment="Center">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="2"/>
+            </Border.Effect>
+            <StackPanel>
+                <Grid Margin="0 0 0 20"/>
+                <TextBox Margin="20 5" HorizontalAlignment="Left" x:Name="Group" materialDesign:HintAssist.Hint="Введите новую группу" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="237"/>
+                <TextBox Margin="20 5" HorizontalAlignment="Left" x:Name="Spec" materialDesign:HintAssist.Hint="Введите новую специальность" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="240"/>
+                <TextBox Margin="20 5" HorizontalAlignment="Left" x:Name="Age" materialDesign:HintAssist.Hint="Введите новый возвраст" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="240"/>
+                <TextBox x:Name="Diagnosis" Margin="20 5" HorizontalAlignment="Left" SpellCheck.IsEnabled="True" AcceptsReturn="True" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Введите новый диагноз" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="44" Width="320"/>
+                <TextBox Margin="20 5" HorizontalAlignment="Left" x:Name="Name" materialDesign:HintAssist.Hint="Введите новое имя" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="240"/>
+                <TextBox Margin="20 5" HorizontalAlignment="Left" x:Name="Course" materialDesign:HintAssist.Hint="Введите новый курс" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="240"/>
+                <Button x:Name="AddButton" HorizontalAlignment="Left" Margin="20 5" Content="Сохранить изменения" Background="#0072F5" Foreground="White" BorderBrush="#0072F5" Height="32" Width="182" Click="AddButton_Click" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

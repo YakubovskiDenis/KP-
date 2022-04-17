@@ -1,0 +1,29 @@
+﻿<Window x:Class="Kursovik.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+Title="Меню" Height="524" Width="800" WindowStyle="ThreeDBorderWindow"  FontFamily="Arial Rounded MT Bold" FontSize="16" WindowStartupLocation="CenterScreen" Visibility="Visible">
+    <Grid x:Name="Mainroot" Background = "#ffdadada" Margin="0,0,0,-6">
+        <Border MinWidth="400" Margin="15,16,15,0" Background="White" VerticalAlignment="Center" Padding=" 30" MaxWidth="500" CornerRadius="25" Height="300">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel Margin="-20,0,-20,0">
+                <TextBlock Text="Меню" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" HorizontalAlignment="Center"/>
+                <Grid Margin="0 0 0 0"/>
+                <Button x:Name="StudentsButton" HorizontalAlignment="Center" Content="Список студентов" Foreground="White" Width="300" BorderBrush="#0072F5"  Margin=" 12" Background="#0072F5" Click="StudentsButton_Click" />
+                <Button x:Name="TestsButton" Content="Редактор тестов" Background="#0072F5" Foreground="White" Width="300" BorderBrush="#0072F5"  Margin="0 12" Click="TestsButton_Click"  />
+                <Button x:Name="OtchetButton" Content="Составление отчетов" Background="#0072F5" Foreground="White" Width="300" BorderBrush="#0072F5" Margin="0 12" Click="OtchetButton_Click" >
+                <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="150"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

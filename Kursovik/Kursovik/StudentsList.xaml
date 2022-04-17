@@ -1,0 +1,45 @@
+﻿<Window x:Class="Kursovik.StudentsList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Kursovik"
+        mc:Ignorable="d"
+Title="Список студентов состоящих на учете" Height="1038" Width="1800" WindowStyle="ThreeDBorderWindow" FontFamily="Arial Rounded MT Bold" FontSize="16" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid x:Name="Mainroot" Background = "#ffdadada">
+        <DataGrid x:FieldModifier="public" IsReadOnly="True" HorizontalAlignment="Left" Height="922" Margin="54,21,0,0" VerticalAlignment="Top" Width="1151" AutoGenerateColumns="True" Name="StudentssGrid">
+
+        </DataGrid>
+        <Border MinWidth="400" Margin="1275,21,95,0" Background="White" VerticalAlignment="Top" Padding="30" MaxWidth="500" CornerRadius="25" Height="378">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel Margin="-20,0,-20,0" VerticalAlignment="Center">
+                <Button x:Name="EditButton" Content="Редактирование информации" Background="#0072F5" Foreground="White" Width="350" BorderBrush="#0072F5" Margin="0 12" Click="EditButton_Click" />
+                <Button x:Name="ResetButton" Content="Сброс результатов" Background="#0072F5" Foreground="White" Width="350" BorderBrush="#0072F5" Margin="0 12" Click="ResetButton_Click" />
+                <Button x:Name="AddStudent" Content="Добавить студента на учет" Background="#0072F5" Foreground="White" Width="350" BorderBrush="#0072F5" Margin="0 12" Click="AddStudent_Click" />
+                <Button x:Name="DeleteStudent" Content="Снять выбранного студента с учета" Background="#0072F5" Foreground="White" Width="350" BorderBrush="#0072F5" Margin="0 12" Click="DeleteStudent_Click" />
+                <Button x:Name="ArchieveButton" Content="Перейти в архив выписанных студентов" Background="#0072F5" Foreground="White" Width="350" BorderBrush="#0072F5" Margin="0 12" Click="ArchieveButton_Click" />
+                <Rectangle x:Name="GoBackButton" Fill="#0072F5" Width="100" Height="32" RadiusX="15" RadiusY="15"  />
+            </StackPanel>
+        </Border>
+        <Label x:Name="GoBackLabel" HorizontalAlignment="Left" Margin="1459,335,0,0" Content="Назад" VerticalAlignment="Top" Foreground="White" MouseDoubleClick="GoBackLabel_MouseDoubleClick" RenderTransformOrigin="0.582,2.444"/>
+        <Border MinWidth="400" Margin="1275,442,95,0" Background="White" VerticalAlignment="Top" Padding="30" MaxWidth="500" CornerRadius="25" Height="501">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel Margin="-20,0,-20,0" VerticalAlignment="Center">
+                <Label FontSize="22" Foreground="Black" Content="Поиск" HorizontalAlignment="Center"></Label>
+                <TextBox x:Name="TextBoxName" materialDesign:HintAssist.Hint=" Введите фамилию" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <Button x:Name="SearchButton" Content="Поиск по фамилии" Background="#0072F5" Foreground="White" BorderBrush="#0072F5" RenderTransformOrigin="1,0.5" Click="SearchButton_Click" Width="204" HorizontalAlignment="Right" Margin="0,12,198,0" />
+                <Label Foreground="Transparent" Content="Поиск" HorizontalAlignment="Center"></Label>
+                <TextBox x:Name="TextBoxGroup" materialDesign:HintAssist.Hint=" Введите номер группы" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <Button x:Name="SearchByGroupBtn" Content="Поиск по номеру группы" Background="#0072F5" Foreground="White" BorderBrush="#0072F5" RenderTransformOrigin="1,0.5" Click="SearchByGroupBtn_Click" Margin="0,12,198,0" />
+                <Label Foreground="Transparent" Content="Поиск" HorizontalAlignment="Center"></Label>
+                <TextBox x:Name="TextBoxCourse" materialDesign:HintAssist.Hint=" Введите номер курса" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <Button x:Name="SearchByCourseBtn" Content="Поиск по номеру курса" Background="#0072F5" HorizontalAlignment="Center" Foreground="White" BorderBrush="#0072F5" RenderTransformOrigin="1,0.5" Click="SearchByCourseBtn_Click" Margin="0,12,198,0" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
